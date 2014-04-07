@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Button xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ic_mic_button" 
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="4dip"
+        android:width="56dp"
+        android:height="56dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/ic_mic"
+        android:src="@drawable/ic_mic" >
+	</Button>

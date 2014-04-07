@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.squid.voicesearchwrapper"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_mic"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Dialog"
+		android:resource="@xml/widget_provider" >
+        <receiver
+            android:name=".AndroidWidget"
+            android:icon="@drawable/ic_mic"
+            android:label="Voice Search Wrapper" >
+            <intent-filter>
+                <action android:name="com.squid.voicesearchwrapper.wrapperactivity" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        
+        <activity
+            android:name="com.squid.voicesearchwrapper.WrapperActivity"
+            android:label="@string/title_activity_wrapper" >
+            <intent-filter> 
+        		<action android:name="android.intent.action.SEARCH_LONG_PRESS" /> 
+        		<category android:name="android.intent.category.DEFAULT" /> 
+    		</intent-filter>
+        </activity>
+        
+
+    </application>
+
+</manifest>
